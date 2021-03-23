@@ -31,3 +31,67 @@ console.log(obj.sub1,obj.sub2);    //construction react
     let obj = new fun_two();
     console.log(obj.sub_one,obj.sub_two(),obj.sub_three,obj.sub_four())   //hello hello-1 hello-2 hello-3
 </script> -->
+<!-- <script>
+    function parentF(){
+
+    };
+    parentF.prototype.mern = function(){
+        return "mern stack Developer";
+    }
+    function childf(){
+
+    }
+    childf.prototype = Object.create(parentF.prototype);
+    childf.prototype.mean = function(){
+         return "mean stack developer"
+    }
+    function subChild(){
+
+    }
+    subChild.prototype = Object.create(childf.prototype);
+    subChild.prototype.mevn = function(){
+        return "mevn stack developer"
+    }
+    let obj = new subChild();
+    console.log(obj.mern(),obj.mean(),obj.mevn());
+ //mern stack Developer mean stack developer mevn stack developer
+</script> -->
+<!-- overriding parent class functionality to child class functionality called as prototype overriding  -->
+<!-- <script>
+  function parent(){
+
+  }
+  parent.prototype.dbfun = function(){
+      return "this is parent class"
+  }
+  function childfun(){
+
+  }
+  childfun.prototype = Object.create(parent.prototype);
+  childfun.prototype.dbfun = function(){
+      return "this is overriding from parent";
+  }
+  let obj = new childfun();
+  console.log(obj.dbfun());    //this is overriding from parent
+</script> -->
+<!-- over loading -->
+<script>
+    function f1(){
+
+    }
+    f1.prototype.add = function(arg1,arg2){
+        return arg1+arg2
+    }
+    f1.prototype.add = function(arg3,arg4,arg5){
+        return arg3+arg4+arg5;
+    }
+    f1.prototype.add = function(arg6,arg7,arg8,arg9){
+        return arg6+arg7+arg8+arg9
+    }
+    let obj = new f1();
+    console.log(obj.add(10,10));         //NaN
+    console.log(obj.add(10,10,10));      //NaN
+    console.log(obj.add(10,10,10,10));    //40
+
+
+</script>
