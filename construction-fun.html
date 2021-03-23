@@ -1,0 +1,33 @@
+<!-- 
+<script>
+function f1(){
+
+};
+f1.prototype.sub1 = "construction";
+function f2(){
+
+};
+f2.prototype = Object.create(f1.prototype);
+f2.prototype.sub2 = "react";
+let obj = new f2();
+console.log(obj.sub1,obj.sub2);    //construction react
+</script> -->
+<!-- <script>
+    function fun_one(){
+
+    }
+    fun_one.prototype.sub_one = "hello";
+    fun_one.prototype.sub_two = function(){
+        return "hello-1"
+    }
+    function fun_two(){
+
+    }
+    fun_two.prototype = Object.create(fun_one.prototype)
+    fun_two.prototype.sub_three = "hello-2";
+    fun_two.prototype.sub_four = function(){
+        return "hello-3"
+    }
+    let obj = new fun_two();
+    console.log(obj.sub_one,obj.sub_two(),obj.sub_three,obj.sub_four())   //hello hello-1 hello-2 hello-3
+</script> -->
