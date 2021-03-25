@@ -1,1 +1,124 @@
 
+<!-- <script>
+    let obj = {
+        sub_one : "angular",
+        sub_two : "react",
+        sub_three : "viu",
+    }
+    console.log(obj)    // {sub_one: "angular", sub_two: "react", sub_three: "viu"}
+    console.log(obj.sub_one)   //angular
+    console.log(obj.sub_one,obj.sub_two,obj.sub_three)   //angular react viu
+    console.log(obj.sub_two.toUpperCase())  // REACT    
+</script> -->
+<!-- <script>
+    let obj = {
+        key1 : "angular",
+        key2: "react",
+        key3 : "viu"
+    }
+    console.log(typeof obj)        //object
+    //  conversion object to string
+    let str = JSON.stringify(obj)
+    console.log(typeof str)          //string
+    // conversion string to object
+    let obj1 = JSON.parse(str);
+    console.log(typeof obj1)         //object
+</script> -->
+<!-- <script>
+    let obj = {
+        val : "angular",
+        val1 : "react",
+        val2 : "viu"
+    }
+    for(let sum in obj){
+        console.log(sum, typeof sum, obj[sum])   //val string angular
+                                                 // val1 string react
+                                                 // val2 string viu
+    }
+</script> -->
+<!-- <script>
+    let obj = {
+        key_1 : "hello"
+    }
+    Object.freeze(obj);
+    console.log(obj)            //{key_1: "hello"}
+    //only we can read,update and delete after giving the freeze 
+    //write
+    obj.key_2 = "hello-2";
+    console.log(obj)              //{key_1: "hello"}
+    // update
+    obj.key_1 = "hello-3";
+    console.log(obj)               //{key_1: "hello"}
+    // delete
+    delete obj.key_1
+    console.log(obj)               //{key_1: "hello"}
+</script>  -->
+<!-- <script>
+    // seal() it is only do like read and update the data
+    let obj = {
+        key1 : "hello-1"
+    }
+    Object.seal(obj);
+    //read
+    console.log(obj.key1)        //hello-1
+    // update
+    obj.key1 = "hello-2";
+    console.log(obj.key1)         //hello-2
+    //write note we can't do write in the seal()
+    obj.key2 = "hello-3"
+    console.log(obj)             //{key1: "hello-2"}
+    // delete  we can't also delete in there 
+    delete obj.key1
+    console.log(obj)              //{key1: "hello-2"}
+</script> -->
+<!-- <script>
+      let obj = {
+        key1 : "hello-1"
+    }
+    Object.defineProperty(obj,"key_2",{value: "hello-2",writable : true}); // if you given true so it will change the value from key-2
+    console.log(obj);             //{key1: "hello-1", key_2: "hello-2"}
+    obj.key1 = "welcome";
+    obj.key_2 = "hii";
+    console.log(obj)              //{key1: "welcome", key_2: "hello-2"}
+</script> -->
+<!-- <script>
+     let obj = {
+        key1 : "hello-1"
+    }
+    Object.defineProperties(obj,{"key2":{value:"hello-1",writable: false},
+                                 "key3":{value:"hello-2",writable:true}})
+   console.log(obj)            // {key1: "hello-1", key2: "hello-1", key3: "hello-2"}
+
+   obj.key1 = "binod";
+   obj.key2 = "sameer";
+   obj.key3 = "sanu";
+   console.log(obj)             //{key1: "binod", key2: "hello-1", key3: "sujhit"}
+
+</script> -->
+<!-- <script>
+    // this operation called immutability
+    let obj1 = {
+        key1: "hello-1"
+    };
+    //immutability
+    let obj2 = {...obj1};  //< this spread operator
+    console.log(obj1);        //{key1: "hello-1"}
+    console.log(obj2);        //{key1: "hello-1"}
+
+    obj1.key1 = "welcome";
+    console.log(obj1);       //{key1: "welcome"}
+    console.log(obj2);       //{key1: "hello-1"}
+</script> -->
+
+<script>
+    //mutable 
+    // if we change the value it occurs of last value
+    let obj1 = {
+        key1:"binod"
+    }
+    let obj2 = obj1;
+    obj1.key1 = "welcome";
+    obj2.key1 = "hello-2";
+     console.log(obj1)     //{key1: "hello-2"}
+     console.log(obj2)     //{key1: "hello-2"}
+</script>
