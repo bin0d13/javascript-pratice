@@ -1,0 +1,97 @@
+array:
+-----
+>collection of indexed elements called as array.
+>[]
+>we will access array elements by using indexes.
+
+
+map:
+---
+>map function used to manipulated the all elements of array.
+let array1 = [1,2,3,4,5]
+let array = array1.map((element,index)=>{
+            return element*10
+        })
+console.log(arr1);    //[1,2,3,4,5]
+console.log(arr2);    //[10,20,30,40,50]
+
+
+filter():
+---------
+>filter is used to create the new array based on condition
+>ex:arr1=[10,20,30,40,50];
+let arr2 = arr1.filter((element,index)=>{
+    return element<=40;
+})
+console.log(arr2)     // [ 10, 20, 30, 40 ]
+
+
+
+
+reduce():
+---------
+>reduce is used to find the sum of array elements
+>ex:
+arr1 = [1,2,3,4,5];
+let arr2 = arr1.reduce((firstElement,secondElement)=>{
+    return firstElement+secondElement;
+})
+console.log(arr2);
+
+reduceRight():
+---------
+>used to perform the summation from right to left.
+>ex: let arr1=["reactjs","to","welcome"].reduceRight((firstElement,secondElement)=>{
+    return firstElement + " "+secondElement;
+ })
+console.log(arr1)         //welcome to reactjs
+
+concat():
+-------
+let arr1 = ["Angular"]
+let arr2 = ["nodejs"];
+let arr3 = ["mongoDB"];
+let arr = arr1.concat(arr2,arr3);
+console.log(arr)         //[ 'Angular', 'nodejs', 'mongoDB' ]
+// ES6 using spread parameter
+let arr5 = [...arr1,...arr2,...arr3];
+console.log(arr5)    //[ 'Angular', 'nodejs', 'mongoDB' ]
+
+
+find():
+------
+ let arr = [1,2,3,4,5];
+ let arr1=arr.find((element,index)=>{
+     return element === 5;
+ })
+ console.log(arr1)    //5 if value is true //if not ans is "undefined".
+
+// some():
+ let arr=[1,2,3,4,5].some((element,index)=>{
+     return element<=3;
+})
+console.log(arr)    // true
+
+
+
+every():
+>if all element satisfies the condition,then it will return true otherwise return false
+
+
+indexOf():
+>indexOf function won't return indexes to  duplicate element.
+>indexOf function won't create indexes to repeated elements
+
+
+fill():
+>to replace the old elements to the new elements
+
+
+flat():
+>it is used to convert multi dimensional array to single dimension array
+
+repeat():
+>repeat is used to read the array elements
+
+for..in():
+>for in loop iterate the only json object
