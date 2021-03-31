@@ -18,7 +18,7 @@
 // })
 // console.log(arr2)     // [ 10, 20, 30, 40 ]
 
-
+//map
 // arr1=[1,2,3,4,5,6,7,8,9]
 // let arr2 = arr1.map((element,index)=>{
 //     return element*10;
