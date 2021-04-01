@@ -59,6 +59,10 @@ console.log(arr5)    //[ 'Angular', 'nodejs', 'mongoDB' ]
 
 
 find():
+
+//The find() method returns the value of the first element in the provided array that satisfies the provided testing function. 
+If no values satisfy the testing function, undefined is returned.
+
 ------
  let arr = [1,2,3,4,5];
  let arr1=arr.find((element,index)=>{
@@ -67,6 +71,10 @@ find():
  console.log(arr1)    //5 if value is true //if not ans is "undefined".
 
 // some():
+
+The some() method tests whether at least one element in the array passes the test implemented by the provided function. 
+It returns true if, in the array, it finds an element for which the provided function returns true; otherwise it returns false. It doesn't modify the array.
+
  let arr=[1,2,3,4,5].some((element,index)=>{
      return element<=3;
 })
